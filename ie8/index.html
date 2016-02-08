@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AltaLink</title>
+</head>
+
+<body>
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Calibri;
+  color: #323232; }
+table#main{
+    text-align:center;
+    border-collapse: collapse;
+    border-bottom:30px solid #fff;
+}
+table#header{
+    text-align:left;
+    border-width:45px 50px 65px;
+    border-style: solid;
+    border-color:#271F10;
+    width:700px;
+}
+h1 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 21.4px;
+  margin: 0;
+  padding: 0; }
+
+h3 {
+  text-transform: uppercase;
+  color: #ef3e42;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  line-height: 15.4px;
+  font-weight: bold; }
+
+h5 {
+  font-size: 13px;
+  line-height: 15.6px;
+  color: #261c02;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  font-weight: normal; }
+
+h2 {
+  font-size: 12px;
+  line-height: 14.4px;
+  text-transform: uppercase;
+  margin: 30px 0 15px;
+  letter-spacing: 1px; }
+
+p {
+  font-size: 10px;
+  line-height: 12px;
+  margin: 0;
+  text-align: justify;
+  padding: 0;
+  max-width: 100%; }
+
+a {
+  font-size: 10px;
+  line-height: 12px;
+  margin: 0;
+  padding: 0;
+  color: #ef3e42; }
+  a:visited {
+    color: #ef3e42; }
+  a:hover {
+    color: #261c02; }
+  .content-step-td a{
+    text-decoration:none;
+    display:block;
+  }
+  .content-step-td{
+    border-collapse:collapse;
+    border-spacing:0;
+    position:relative;
+  }
+  .content-step-td *{
+    color:#fff;
+  }
+  .content-step-td h4{
+    background-image: url(images/circle.png);
+    border-radius: 50%;
+    color: #271f10;
+    font-size: 26px;
+    font-style: italic;
+    height: 35px;
+    left: 50%;
+    line-height: 29px;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: -17px;
+    width: 35px;
+  }
+  .content-step{    
+    height:301px;
+    width:100%;
+    text-align:center;
+  }
+  .content-step-td h1 {
+      font-size: 23px;
+      line-height: 27.6px;
+      color: #fff;
+      margin-bottom: 25px;
+      text-transform: uppercase; }
+  .content-step-td p {
+      text-align: center;
+      font-size: 14px;
+      line-height: 16.4px;
+      color: #fff;
+      margin-bottom: 20px;
+      min-height: 100px; }
+  .content-step-td span {
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 11px;
+      line-height: 17px;
+      letter-space: 1px; }
+  .content-step *{
+    text-align:center;
+  }
+  #main td.content-step-td:hover{
+    background-color:#fff;
+  }
+  .content-step-td:hover *{
+    color:#000;
+  }
+  td#step1 h4{
+    left:55px;
+  }
+  td#step2 h4{
+    left:75px;
+  }
+  td#step3 h4{
+    left:75px;
+  }
+  td#step4 h4{
+    left:75px;
+  }
+  td#step1{
+    background-color:#717467;
+  }
+  td#step1 a>div{
+    width:145px;
+    border-right: 10px solid #717467;
+  }
+  td#step2 a>div{
+    width:185px;
+    border-left: 30px solid #ee3e42;
+    border-right: 10px solid #ee3e42;
+  }
+  td#step3 a>div{
+    width:185px;
+    border-left: 30px solid #365d9d;
+    border-right: 10px solid #365d9d;
+  }
+  td#step4 a>div{
+    width:185px;
+    border-left: 30px solid #802428;
+  }
+  td#step2{
+    background-color:#ee3e42;
+  }
+  td#step3{
+    background-color:#365d9d;
+  }
+  td#step4{
+    background-color:#802428;
+  }
+  .content-step-td .arrows{
+    position:absolute;
+    top:0;
+    width:42px;
+    height:100%;
+    z-index: 2;
+  }
+  .content-step-td .arrows.arrow-right{
+    right:-31px;
+  }
+  .content-step-td .arrows.arrow-left{
+    left:-11px;
+  }
+  td#step1 .arrow-right{
+    background-image:url(images/step-1-after.png);
+  }
+  td#step2 .arrow-right{
+    background-image:url(images/step-2-after.png);
+  }
+  td#step3 .arrow-right{
+    background-image:url(images/step-3-after.png);
+  }
+  td#step2 .arrow-left{
+    background-image:url(images/step-2-before.png);
+  }
+  td#step3 .arrow-left{
+    background-image:url(images/step-3-before.png);
+  }
+  td#step4 .arrow-left{
+    background-image:url(images/step-4-before.png);
+  }
+  #main td.content-step-td:hover .arrow-left{
+    background-image:url(images/step-white-before.png);
+    width:42px;
+    left:-10px;
+  }
+  #main td.content-step-td:hover .arrow-right{
+    background-image:url(images/step-white-after.png);
+    width:42px;
+    right:-30px;
+  }
+  .footer ul{
+    padding-left:10px;
+    margin:0;
+  }
+  .footer li{
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .bottom-arrow{
+    position:absolute;
+    width:44px;
+    height:22px;
+    background-image:url(images/bottom.png);
+    bottom:-22px;
+    left:50%;
+    margin-left:-22px;
+  }
+  .arrow-left-next{
+    position:absolute;
+    background-image:url(images/step-1-arrow.png);
+    width:15px;
+    height:35px;
+    right:0;
+    top:50%;
+    margin-top:-17px;
+  }
+  .define-step{
+    position:relative;
+    width: 115px;
+  }
+  .define-step h3{
+    color: #717467;
+  }
+  .define-step:hover h3{
+    color: #fff;
+  }
+  .define-step:hover .arrow-left-next{    
+    background-image:url(images/step-1-arrow-white.png);
+  }
+</style>
+<table id="main">
+      <tr>
+        <td style="background-color:#271F10;" colspan="4">        
+            <table id="header">
+                <tr>
+                    <td>
+                        <h3>AltaLink Improvement Methodology</h3>
+                        <h1 style="font-weight: 400;">Welcome to the AltaLink Improvement Method (AIM) section, your one stop for everything you need to know about process improvement at AltaLink.
+                    </td>
+                </tr>
+            </table>
+        </h1>    
+        </td>
+      </tr>
+      <tr>
+        <td id="step1" class="content-step-td">        
+            <a href="inner-1.html">
+                <div>
+                <table class="content-step">
+                    <tr>
+                        <td>
+                        
+                            <div>
+                                <h4>1</h4>            
+                                <h1>DEFINE</h1>
+                                <p>Describe the objective,<br />scope and impact of<br />the improvement</p>
+                                <span>+<br />Learn More</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table> 
+                <div class="arrow-right arrows"></div> 
+                </div>
+            </a> 
+        </td>
+        <td  id="step2" class="content-step-td">   
+            <a href="inner-2.html">     
+                <div>
+                <div class="arrow-left arrows"></div>
+                <table class="content-step">
+                    <tr>
+                        <td>
+                            <div class="each-step step-2">
+                                <h4>2</h4>
+                                <h1>UNDERSTAND</h1>
+                                <p>Thoroughly understand<br />the current state of<br />the process, identify the waste and validate<br />the problem or opportunity</p>            
+                                <span>+<br />Learn More</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>   
+                <div class="arrow-right arrows"></div>
+                </div>
+            </a>
+        </td>
+        <td id="step3" class="content-step-td"> 
+            <a href="inner-3.html">       
+                <div>
+                <div class="arrow-left arrows"></div>
+                <table class="content-step">
+                    <tr>
+                        <td>
+                            <div class="each-step step-3">
+                                <h4>3</h4>
+                                <h1>IMPROVE</h1>
+                                <p>Develop, test and<br />implement process<br />changes to address<br />the  problem or<br />opportunity</p>
+                                <span>+<br />Learn More</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>   
+                <div class="arrow-right arrows"></div>
+                </div>
+            </a>
+        </td>
+        <td id="step4" class="content-step-td">  
+            <a href="inner-4.html">      
+                <div>
+                <div class="arrow-left arrows"></div>
+                <table class="content-step">
+                    <tr>
+                        <td>
+                            <div class="each-step last">
+                                <h4>4</h4>
+                                <h1>SUSTAIN</h1>
+                                <p>Sustain the<br />improvement gains,<br />ensure ongoing support<br />to prevent reversal of<br />the improvement</p>
+                                <span>+<br />Learn More</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table> 
+                </div>
+            </a>  
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:#271F10;" colspan="4">
+            <table style="border-width: 10px 50px; border-style: solid; border-color:#271F10; text-align:left;">
+                <tr>
+                    <td>
+                        <h1 style="width:480px; font-size: 20px; line-height: 34px;">Get started with the AIM Toolkit</h1>
+                    </td>
+                    <td>
+                        <div class="define-step">
+                            <a href="inner-1.html" style="text-decoration: none;">
+                                <h3 style="font-size: 10px; line-height: 12px;">Step 1</h3>
+                                <h1 style="font-size: 24px; line-height: 25px;">DEFINE</h1>
+                                <div class="arrow-left-next"></div>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:#e8ebe9; position:relative;" colspan="4">
+            <table style="border-width: 10px 50px; border-style: solid; border-color:#e8ebe9; text-align:left; width:700px;">
+                <tr>
+                    <td>                        
+                        <h3>What is AIM?</h3>
+                        <h5>AIM is a made-for-AltaLink process improvement approach. It is a simple, 4-stage process that takes into consideration our business and our culture and uses best practices and core concepts from other well-known improvement methodologies like Lean and Six Sigma. AIM will allow everyone at AltaLink to improve processes.</h5>
+                    </td>
+                </tr>
+            </table>
+            <div class="bottom-arrow"></div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+            <table class="footer" style="border-width: 0 50px; border-style: solid; border-color:#ffffff; text-align:left; width:700px;">
+                <tr>
+                    <td valign="top" style="border-right: 10px solid #fff;">
+                        <div  style="width: 275px;">
+                        <h2>WHAT IS A PROCESS?</h2>
+                        <p>A process is a series of actions that produce something or lead to a particular result. Any work can be considered a process, for example: scheduling maintenance, onboarding new employees, or even setting up a meeting.</p>
+                        <h2>WHY ARE WE IMPROVING PROCESSES?</h2>
+                        <p>In most areas, AltaLink is not a process-oriented organization. This means many of us do similar tasks in different ways. It also means we frequently rely on the knowledge of others to get our jobs done. These ways of doing things can lead to duplication, inefficiency, inconsistency and “silo” thinking.</p>
+                        <h2>WHAT ARE THE BENEFITS OF IMPROVED PROCESSES?</h2>
+                        <p>Some of the benefits of becoming process-oriented include:</p>
+                        <ul>
+                           <li>Greater role clarity</li>
+                           <li>More efficient work</li>
+                           <li>Reduced number of silos</li>
+                           <li>Reduced duplication</li>
+                           <li>More consistency in deliverables</li>
+                           <li>Enhanced quality</li>
+                           <li>Improved business sustainability</li>
+                        </ul>
+                        <h2>BECOMING MORE PROCESS-ORIENTED ALSO REDUCES WASTE. WHAT DO WE MEAN BY WASTE?</h2>
+                        <ul>
+                            <li>Over-processing (too many sign-offs, exceeding requests)</li>
+                            <li>Transportation (forms moving between departments)</li>
+                            <li>Motion (personal movement)</li>
+                            <li>Inventory (overfull inboxes)</li>
+                            <li>Waiting (delays between steps)</li>
+                            <li>Defects (insufficient or wrong information, necessitating additional work)</li>
+                            <li>Overproduction (producing more than is needed)</li>
+                            <li>Underutilized human capability (underused skills)</li>
+                            <li>Reprioritization (changing priorities mid-stream)</li>
+                        </ul><br>
+                        <p>Some of these apply to AltaLink more than others, but it is safe to say all organizations are wasteful in some ways. Reducing or eliminating waste can lead to better business results and greater personal satisfaction.</p>
+                        </div>
+                    </td>
+                    <td valign="top" style="border-left: 10px solid #fff;">
+                        <div style="width: 275px;">
+                        <h2>WHAT IS EXPECTED OF ME?</h2>
+                        <p>Please use AIM when improving processes in your role or with your team. Note: AIM shares key concepts with the Diamond methodology, which has been in use at AltaLink for a number of years. If you have documented or improved processes using the Diamond methodology they are still valid, but going forward, all AltaLink employees should use AIM.</p>
+                        <h2>WHAT IS THE GOAL OF AIM?</h2>
+                        <p>The goal of AIM is to improve business results by having employees and teams learn, apply and exercise a consistent approach for process improvement.</p>
+                        <h2>WHERE CAN I GET HELP WITH AIM?</h2>
+                        <p>While you are expected to drive process improvement work based on your functional business plans and PRD goals, the AIM team is here to help with training and support. Please get in touch with one of the key contacts below to schedule training or ask for support. See the <a href="#">AIM Toolkit</a> to get comfortable with the methodology.</p>
+                        <h2>KEY CONTACTS</h2>
+                        <p>
+                            <a href="">Byron Moore</a>, Director, Customer Excellence<br>
+                            <a href="">Evelyn Brisibe</a>, Manager, BIT<br>
+                            <a href="">George Gundesen</a>, Sr. Performance Excellence Advisor<br>
+                            <a href="">Tracy Ableson</a>, Business Process Analyst<br>
+                            <a href="">Amanda Lyddiat</a>, Administrative Assistant &amp; main contact to schedule training
+                        </p>
+                        <h2>CENTRAL PROCESS REPOSITORY - STAY TUNED</h2>
+                        <p>AltaLink is working on identifying a central repository for all processes. Please stay tuned for more information as it becomes available. For now, please save your processes to your teamsite, x:drive or v:drive.</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+      </tr>
+</table>
+</body>
+</html>

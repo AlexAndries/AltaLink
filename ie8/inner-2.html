@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AltaLink</title>
+</head>
+
+<body>
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Calibri;
+  color: #323232; }
+table#main{
+    text-align:center;
+    border-collapse: collapse;
+    border-bottom:30px solid #fff;
+}
+table#header{
+    text-align:left;
+    border-width:45px 50px 35px;
+    border-style: solid;
+    border-color:#271F10;
+    width:700px;
+}
+#header a{
+    text-decoration:none;
+    margin-top:20px;
+    display:inline-block;
+}
+h1 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 21.4px;
+  margin: 0;
+  padding: 0; }
+
+h3 {
+  text-transform: uppercase;
+  color: #ef3e42;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  line-height: 15.4px;
+  font-weight: bold; }
+
+h5 {
+  font-size: 13px;
+  line-height: 15.6px;
+  color: #261c02;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  font-weight: normal; }
+
+h2 {
+  font-size: 12px;
+  line-height: 14.4px;
+  text-transform: uppercase;
+  margin: 30px 0 15px;
+  letter-spacing: 1px; }
+
+p {
+  font-size: 10px;
+  line-height: 12px;
+  margin: 0;
+  text-align: justify;
+  padding: 0;
+  max-width: 100%; }
+
+a {
+  font-size: 10px;
+  line-height: 12px;
+  margin: 0;
+  padding: 0;
+  color: #ef3e42; }
+  a:visited {
+    color: #ef3e42; }
+  a:hover {
+    color: #261c02; }
+  .content-step-td a{
+    text-decoration:none;
+  }
+  .content-step-td{
+    border-collapse:collapse;
+    border-spacing:0;
+    position:relative;
+    background-color: #5d6154;
+  }
+  .content-step-td *{
+    color:#fff;
+  }
+  .content-step{    
+    height:301px;
+    width:100%;
+    text-align:center;
+  }
+  .content-step-td h3 {
+      cursor: pointer;
+      padding: 6px 0;
+      text-align: center;
+      width: 175px;
+  }
+  .content-step-td a {
+      color: #959595;
+      display: block;
+      font-size: 15px;
+      line-height: 18px;
+      text-decoration: none;
+  }
+  .content-step-td#step1:hover{
+    background-color:#717467;
+  }
+  .content-step-td#step1:hover a{
+    color:#fff;
+  }
+  .content-step-td#step2:hover a{
+    color:#fff;
+  }
+  .content-step-td#step2 a{
+    color:#fff;
+  }
+  .content-step-td#step3:hover a{
+    color:#fff;
+  }
+  .content-step-td#step4:hover a{
+    color:#fff;
+  }
+  .content-step-td#step2:hover{
+    background-color:#ee3e42;
+  }
+  .content-step-td#step2{
+    background-color:#ee3e42;
+  }
+  .content-step-td#step3:hover{
+    background-color:#365d9d;
+  }
+  .content-step-td#step4:hover{
+    background-color:#802428;
+  }
+  .content-step-td .arrows{
+    position:absolute;
+    top:0;
+    width:10px;
+    height:100%;
+    z-index: 2;
+    height:32px;
+  }
+  .content-step-td .arrows.arrow-right{
+    right:-10px;
+  }
+  .content-step-td .arrows.arrow-left{
+    left:0;
+  }
+  td#step1:hover .arrow-right{
+    background-image:url(images/step-1-after-small.png);
+    right:0;
+  }
+  td#step2:hover .arrow-right{
+    background-image:url(images/step-2-after-small.png);
+  }
+  td#step2 .arrow-right{
+    background-image:url(images/step-2-after-small.png);
+  }
+  td#step3:hover .arrow-right{
+    background-image:url(images/step-3-after-small.png);
+  }
+  td#step2:hover .arrow-left{
+    background-image:url(images/step-2-before-small.png);
+  }
+  td#step2 .arrow-left{
+    background-image:url(images/step-2-before-small.png);
+    left:-9px;
+  }
+  td#step3:hover .arrow-left{
+    background-image:url(images/step-3-before-small.png);
+  }
+  td#step4:hover .arrow-left{
+    background-image:url(images/step-4-before-small.png);
+    left:-9px;
+  }
+  .footer ul{
+    padding-left:10px;
+    margin:0;
+  }
+  .footer li{
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .content-inner-steps h1 {
+  color: #fff;
+  font-size: 40px;
+  line-height: 48px;
+}
+.content-inner-steps h2 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 22px;
+  margin: 15px 0;
+  text-transform: none;
+}
+.content-inner-steps ul {
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+.content-inner-steps li {
+  color: #fff;
+  font-size: 14px;
+  line-height: 17px;
+}
+.next-button {
+  height: 240px;
+  position: absolute;
+  width: 50px;
+  background-image:url(images/next-arrow.png);
+  top:35px;
+  right:50px;
+}
+.next-button:hover{
+    background-image:url(images/next-arrow-white.png);
+}
+.next-button:hover .go-to-next{
+    color:#fff;
+}
+.next-button a {
+  display: block;
+  padding: 115px 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  z-index: 4;
+}
+.next-button .go-to-next {
+  color: #261c02;
+  font-size: 10px;
+  line-height: 12px;
+  position: relative;
+  z-index: 3;
+}
+</style>
+<table id="main">
+      <tr>
+        <td style="background-color:#271F10;" colspan="4">        
+            <table id="header">
+                <tr>
+                    <td>                        
+                        <h3>AIM TOOLKIT</h3>
+                        <h1>This toolkit will help you apply the AltaLink Improvement Method. Click on each step to learn more.</h1>
+                        <a href="index.html"><h3>HOME</h3></a>
+                    </td>
+                </tr>
+            </table>
+        </h1>    
+        </td>
+      </tr>
+      <tr>
+        <td id="step1" class="content-step-td"> 
+            <div>
+                <h3><a href="inner-1.html">Step 1</a></h3>    
+                <div class="arrow-right arrows"></div> 
+            </div>
+        </td>
+        <td  id="step2" class="content-step-td">   
+            <div>
+                <div class="arrow-left arrows"></div>
+                <h3><a href="#">Step 2</a></h3>  
+                <div class="arrow-right arrows"></div>
+            </div>
+        </td>
+        <td id="step3" class="content-step-td"> 
+            <div>
+                <div class="arrow-left arrows"></div>
+                <h3><a href="inner-3.html">Step 3</a></h3>  
+                <div class="arrow-right arrows"></div>
+            </div>
+        </td>
+        <td id="step4" class="content-step-td">  
+            <div>
+                <div class="arrow-left arrows"></div>
+                <h3><a href="inner-4.html">Step 4</a></h3>  
+            </div>  
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4"  style="background-color: #ee3e42; position:relative;">
+            <table class="content-inner-steps" style="border-width: 30px 50px 42px 90px; border-style: solid; border-color:#ee3e42; width: 700px; text-align:left;">
+                <tr>
+                    <td> 
+                        <h1>UNDERSTAND</h1>
+                        <h2>Thoroughly understand the current state of the<br />process, identify the waste and validate the problem <br />or opportunity</h2>
+                            <ul>
+                               <li> Collect reliable and relevant facts and data</li>
+                               <li>Identify stakeholders</li>
+                               <li> Develop a process map of the current state</li>
+                               <li>Identify the waste inherent in the process</li>
+                               <li>Pinpoint the root causes of the problem</li>
+                               <li>Take action to solve any obvious problems that can be fixed immediately</li>
+                            </ul>                       
+                    </td>
+                </tr>
+            </table>
+            <div class="next-button">
+                <a href="inner-3.html">
+                    <div class="go-to-next">Next</div>
+                </a>
+            </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4" style="background-color: #e8ebe9;">
+            <table class="footer" style="border-width: 0 50px 30px; border-style: solid; border-color:#e8ebe9; text-align:left; width:700px;">
+                <tr>
+                    <td valign="top" style="border-right: 10px solid #e8ebe9;">    
+                        <div style="width: 275px;">                            
+                            <h2>KEY QUESTIONS TO ANSWER</h2>
+                            <ul>
+                                <li>Why does the problem occur? What are the barriers to improvement?</li>
+                                <li>How can we measure it?</li>
+                                <li>What are the steps in this process? Are there any unnecessary steps?</li>
+                            </ul>
+                            <h2>COMMON TOOLS AND TECHNIQUES:</h2>
+                            <ul>
+                                <li>Process mapping</li>
+                                <li>Waste analysis</li>
+                                <li>Value stream mapping</li>
+                                <li>Cause and effect diagrams</li>
+                                <li>Root cause analysis</li>
+                            </ul>
+                        </div>      
+                    </td>
+                    <td valign="top" style="border-left: 10px solid #e8ebe9;">
+                        <div style="width: 275px;">                            
+                            <h2>MINIMUM DELIVERABLE</h2>
+                            <ul>
+                                <li>Reasons why the problem occurs</li>
+                                <li>Clear understanding of the current state of the process</li>
+                            </ul>        
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+      </tr>
+</table>
+</body>
+</html>

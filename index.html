@@ -1,0 +1,378 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="Alex" />
+	<title>AltaLink</title>
+    <!--<link href="style.css" rel="stylesheet" type="text/css " />-->
+</head>
+<body>
+<!-- copy from here (without this line) -->
+<div class="body">
+<style>
+.body {
+  width: 700px;
+  margin: auto;
+  background-color: #fff;
+  overflow: hidden; }
+  .body > div {
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+    float: left; }
+  .body * {
+    box-sizing: border-box;
+    font-family: Calibri;
+    color: #323232; }
+  .body h1 {
+    color: #fff;
+    font-size: 18px;
+    line-height: 21.4px;
+    margin: 0;
+    padding: 0; }
+  .body h3 {
+    text-transform: uppercase;
+    color: #ef3e42;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    line-height: 15.4px;
+    font-weight: bold; }
+  .body h5 {
+    font-size: 13px;
+    line-height: 15.6px;
+    color: #261c02;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    font-weight: normal; }
+  .body h2 {
+    font-size: 12px;
+    line-height: 14.4px;
+    text-transform: uppercase;
+    margin: 30px 0 15px;
+    letter-spacing: 1px; }
+  .body p {
+    font-size: 10px;
+    line-height: 12px;
+    margin: 0;
+    text-align: justify;
+    padding: 0;
+    max-width: 100%; }
+  .body a {
+    font-size: 10px;
+    line-height: 12px;
+    margin: 0;
+    padding: 0;
+    color: #ef3e42; }
+    .body a:visited {
+      color: #ef3e42; }
+    .body a:hover {
+      color: #261c02; }
+  .body .header {
+    background-color: #271F10;
+    padding-top: 45px;
+    padding-bottom: 65px; }
+    .body .header a {
+      margin-top: 20px;
+      text-transform: uppercase;
+      margin-bottom: -30px;
+      text-decoration: none;
+      color: #959595;
+      font-size: 10px;
+      display: inline-block; }
+    .body .header h1 {
+      font-weight: 400; }
+  .body .body-main {
+    padding: 0;
+    background-color: #802428; }
+    .body .body-main > a {
+      display: block; }
+      .body .body-main > a:hover .each-step {
+        background-color: #fff; }
+        .body .body-main > a:hover .each-step:before {
+          border-color: transparent transparent transparent #fff; }
+        .body .body-main > a:hover .each-step * {
+          color: #271F10; }
+    .body .body-main .each-step {
+      position: relative;
+      padding: 70px 0 20px 40px;
+      float: left;
+      height: 300px;
+      text-align: center; }
+      .body .body-main .each-step.step-1 {
+        width: 145px;
+        background-color: #FDBD10;
+        z-index: 9;
+        padding: 70px 0 20px 10px; }
+        .body .body-main .each-step.step-1:before {
+          border-color: transparent transparent transparent #FDBD10; }
+        .body .body-main .each-step.step-1 h4 {
+          left: 50%;
+          margin-left: -15px; }
+      .body .body-main .each-step.step-2 {
+        width: 185px;
+        background-color: #EE3E42;
+        z-index: 8; }
+        .body .body-main .each-step.step-2:before {
+          border-color: transparent transparent transparent #EE3E42; }
+      .body .body-main .each-step.step-3 {
+        width: 185px;
+        background-color: #365D9D;
+        z-index: 7; }
+        .body .body-main .each-step.step-3:before {
+          border-color: transparent transparent transparent #365D9D; }
+      .body .body-main .each-step.last {
+        width: 185px; }
+      .body .body-main .each-step:before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 150px 0 150px 40px;
+        top: 0;
+        right: -40px; }
+      .body .body-main .each-step.last {
+        padding-right: 0;
+        margin-right: 0; }
+        .body .body-main .each-step.last:before {
+          border-width: 0; }
+      .body .body-main .each-step h1 {
+        font-size: 23px;
+        line-height: 27.6px;
+        color: #fff;
+        margin-bottom: 25px;
+        text-transform: uppercase; }
+      .body .body-main .each-step p {
+        text-align: center;
+        font-size: 14px;
+        line-height: 16.4px;
+        color: #fff;
+        margin-bottom: 20px;
+        min-height: 100px; }
+      .body .body-main .each-step span {
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 11px;
+        line-height: 17px;
+        letter-space: 1px; }
+      .body .body-main .each-step h4 {
+        position: absolute;
+        left: 50%;
+        top: -15px;
+        font-style: italic;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: #fff;
+        color: #271F10;
+        font-size: 26px;
+        line-height: 29px;
+        margin: 0; }
+  .body .before-footer {
+    background-color: #E8EBE9;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    position: relative; }
+    .body .before-footer:after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      bottom: -22px;
+      left: 50%;
+      margin-left: -22.5px;
+      border-style: solid;
+      border-width: 22px 22.5px 0 22.5px;
+      border-color: #E8EBE9 transparent transparent transparent; }
+    .body .before-footer.inner {
+      margin-bottom: 30px; }
+      .body .before-footer.inner:after {
+        border-width: 0; }
+      .body .before-footer.inner > div {
+        min-height: 120px; }
+  .body .col2 {
+    width: 50%;
+    float: left;
+    padding-left: 0;
+    padding-right: 25px; }
+    .body .col2.right {
+      padding-left: 25px;
+      padding-right: 0; }
+    .body .col2 ul {
+      margin: 0;
+      padding: 0 0 0 10px; }
+      .body .col2 ul li {
+        font-size: 10px;
+        line-height: 12px;
+        list-style: none;
+        position: relative; }
+        .body .col2 ul li:before {
+          content: "";
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          background-color: #323232;
+          border-radius: 50%;
+          left: -10px;
+          top: 5px; }
+  .body .footer {
+    margin-bottom: 45px; }
+  .body .go-first-step {
+    background-color: #271F10;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    .body .go-first-step > h1 {
+      font-size: 20px;
+      line-height: 34px;
+      width: 60%;
+      float: left; }
+    .body .go-first-step .define-step {
+      float: right;
+      width: 120px;
+      cursor: pointer;
+      position: relative; }
+      .body .go-first-step .define-step * {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        text-decoration: none; }
+      .body .go-first-step .define-step h1 {
+        font-size: 24px;
+        line-height: 25px; }
+      .body .go-first-step .define-step h3 {
+        font-size: 10px;
+        line-height: 12px;
+        color: #FDBD10; }
+      .body .go-first-step .define-step:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 17px 0 18px 15px;
+        border-color: transparent transparent transparent #FDBD10; }
+      .body .go-first-step .define-step:after {
+        content: "";
+        position: absolute;
+        right: 2px;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 17px 0 18px 15px;
+        border-color: transparent transparent transparent #271F10; }
+      .body .go-first-step .define-step:hover:before {
+        border-color: transparent transparent transparent #FfF; }
+</style>
+    <div class="header">
+        <h3>AltaLink Improvement Methodology</h3>
+        <h1>Welcome to the AltaLink Improvement Methodology (AIMD) section, your one stop for everything you need to know about process improvement at AltaLink</h1>
+    </div>
+    <div class="body-main">
+        <a href="inner-1.html">
+            <div class="each-step step-1">
+                <h4>1</h4>            
+                <h1>DEFINE</h1>
+                <p>Describe the objective,<br />scope and impact of<br />the improvement</p>
+                <span>+<br />Learn More</span> 
+            </div>           
+        </a>
+        <a href="inner-2.html">
+        <div class="each-step step-2">
+            <h4>2</h4>
+            <h1>UNDERSTAND</h1>
+            <p>Thoroughly understand<br />the current state of<br />the process and validate<br />the problem or opportunity</p>            
+            <span>+<br />Learn More</span>
+        </div>
+        </a>
+        <a href="inner-3.html">
+        <div class="each-step step-3">
+            <h4>3</h4>
+            <h1>IMPROVE</h1>
+            <p>Develop, test and<br />implement process<br />changes to address<br />the  problem or<br />opportunity</p>
+            <span>+<br />Learn More</span>
+        </div>
+        </a>
+        <a href="inner-4.html">
+        <div class="each-step last">
+            <h4>4</h4>
+            <h1>DEFINE</h1>
+            <p>Sustain the<br />improvement gains,<br />ensure ongoing support<br />to prevent reversal of<br />the improvement</p>
+            <span>+<br />Learn More</span>
+        </div>
+        </a>
+    </div>
+    <div class="go-first-step">
+        <h1>Get started with the AIM Toolkit</h1>
+        <div class="define-step">
+            <a href="inner-1.html">
+                <h3>Step 1</h3>
+                <h1>DEFINE</h1>
+            </a>
+        </div>
+    </div>
+    <div class="before-footer">
+        <h3>What is AIM?</h3>
+        <h5>AIM is a made-for-AltaLink process improvement approach. It is a simple, 4-stage process that takes into consideration our business and our culture and uses best practices and core concepts from other well-known improvement methodologies like Lean and Six Sigma. AIM will allow everyone at AltaLink to improve processes. Go to the Toolkit to get started.</h5>
+    </div>
+    <div class="footer">
+        <div class="col2">
+            <h2>WHAT IS A PROCESS?</h2>
+            <p>A process is a series of actions that produce something or lead to a particular result. Any work can be considered a process, for example: scheduling maintenance, onboarding new employees, or even setting up a meeting.</p>
+            <h2>WHY ARE WE IMPROVING PROCESSES?</h2>
+            <p>In most areas, AltaLink is not a process-oriented organization . This means many of us do similar tasks in different ways. It also means we frequently rely on the knowledge of others to get our jobs done. These ways of doing things can lead to duplication, inefficiency, inconsistency and “silo” thinking.</p>
+            <h2>WHAT ARE THE BENEFITS OF IMPROVED PROCESSES?</h2>
+            <p>Some of the benefits of becoming process-oriented include:</p>
+            <ul>
+                <li>Greater role clarity</li>
+                <li>More efficient work</li>
+                <li>Reduced number of silos</li>
+                <li>Reduced duplication</li>
+                <li>More consistency in deliverables</li>
+                <li>Enhanced quality</li>
+                <li>Improved business sustainability</li>
+                <li>Increased customer satisfaction</li>
+            </ul>
+            <h2>BECOMING MORE PROCESS-ORIENTED ALSO REDUCES WASTE. WHAT DO WE MEAN BY WASTE?</h2>
+            <ul>
+                <li>Over-processing (too many sign-offs, exceeding requests)</li>
+                <li>Transportation (forms moving between departments)</li>
+                <li>Motion (personal movement)</li>
+                <li>Inventory (overfull inboxes)</li>
+                <li>Waiting (delays between steps)</li>
+                <li>Defects (insufficient or wrong information, necessitating additional work)</li>
+                <li>Overproduction (producing more than is needed)</li>
+                <li>Underutilized human capability (underused skills)</li>
+                <li>Reprioritization (changing priorities mid-stream)</li>
+            </ul>
+        </div>
+        <div class="col2 right">
+            <h2>WHAT IS EXPECTED OF ME?</h2>
+            <p>Please use AIM when improving processes in your role or with your team. Note: AIM shares key concepts with the Diamond methodology, which has been at AltaLink for a number of years. If you have documented or improved processes using that the Diamond methodology they are still valid, but going forward, all AltaLink employees should use AIM.</p>
+            <h2>WHAT IS THE GOAL OF AIM?</h2>
+            <p>The goal of AIM is to improve business results by having employees and teams learn, apply and exercise a consistent approach for process improvement.</p>
+            <h2>WHERE CAN I GET HELP WITH AIM?</h2>
+            <p>While you are expected to drive process improvement work based on your functional business plans and PRD goals, the AIM team is here to help with training and support. Please get in touch with one of the key contacts below to schedule training or ask for support. See the AIM Toolkit to get comfortable with the methodology.</p>
+            <h2>KEY CONTACTS</h2>
+            <p>
+                <a href="">Byron Moore</a>, Director, Customer Excellence<br />
+                <a href="">Evelyn Brisibe</a>, Manager, BIT<br />
+                <a href="">George Gundesen</a>, Sr. Performance Excellence Advisor<br />
+                <a href="">Tracy Ableson</a>, Business Process Analyst<br />
+                <a href="">Amanda Lyddiat</a>, Administrative Assistant &amp; main contact to schedule training
+            </p>
+            <h2>CENTRAL PROCESS REPOSITORY - STAY TUNED</h2>
+            <p>AltaLink is working on identifying a central repository for all processes. Please stay tuned for more information as it becomes available. For now, please save your processes to your teamsite, x:drive or v:drive.</p>
+        </div>
+    </div>
+    </div>
+<!-- Above here (without this line)-->
+</body>
+</html>
